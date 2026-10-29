@@ -36,4 +36,7 @@
   --mono: ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace;
   --sans: -apple-system, 'Segoe UI', 'PingFang SC', 'Helvetica Neue', Arial, sans-serif;
   --shadow: 0 1px 2px rgb(31 35 27 / 6%);
+  --site-reading-light:
+    radial-gradient(ellipse 90% 640px at 24% 220px, var(--raised) 12%, transparent 78%),
+    linear-gradient(var(--paper), var(--surface));
 }
