@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>dbfox — Explore schemas. Translate SQL. Plan migrations.</title>
+  <meta name="description" content="A local database workspace for PostgreSQL, MySQL, Redshift and ClickHouse. Explore DDL, translate SQL, trace lineage and review migration plans.">
+  <link rel="canonical" href="https://richardgvin.github.io/dbfox-site/en/">
+  <link rel="alternate" hreflang="zh-CN" href="https://richardgvin.github.io/dbfox-site/">
+  <link rel="alternate" hreflang="en" href="https://richardgvin.github.io/dbfox-site/en/">
+  <link rel="alternate" hreflang="x-default" href="https://richardgvin.github.io/dbfox-site/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="dbfox — Explore schemas. Translate SQL. Plan migrations.">
+  <meta property="og:description" content="A local database workspace for PostgreSQL, MySQL, Redshift and ClickHouse. Explore DDL, translate SQL, trace lineage and review migration plans.">
+  <meta property="og:url" content="https://richardgvin.github.io/dbfox-site/en/">
+  <meta property="og:image" content="https://richardgvin.github.io/dbfox-site/assets/workspace.jpg">
+  <meta property="og:image:alt" content="dbfox workspace with a PostgreSQL connection, SQL editor and a sample query result table.">
+  <link rel="icon" href="/dbfox-site/assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/dbfox-site/assets/theme.css">
+  <link rel="stylesheet" href="/dbfox-site/assets/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="header wrap">
+    <a class="brand" href="/dbfox-site/en/" aria-label="dbfox home"><img src="/dbfox-site/assets/logo.svg" width="32" height="32" alt=""><span>dbfox<span class="brand-dot">.</span></span></a>
+    <nav aria-label="Main navigation">
+      <a href="#features">Features</a>
+      <a href="#databases">Databases</a>
+      <a href="#mcp">MCP</a>
+      <a class="language" href="/dbfox-site/" lang="zh-CN" hreflang="zh-CN">中文</a>
+      <a class="button small" href="#install">Get started <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span>Your local workspace for SQL &amp; migrations</p>
+      <div class="hero-copy">
+        <h1 id="hero-title">Explore schemas.<br><span>Translate SQL. Plan migrations.</span></h1>
+        <div class="hero-description">
+          <p>Bring database objects, SQL dialects and migration plans into one workspace. Understand what changes before you run it.</p>
+          <div class="actions"><a class="button" href="#install">Get started <span aria-hidden="true">↗</span></a><a class="text-link" href="#features">Explore the workspace <span aria-hidden="true">↓</span></a></div>
+          <p class="fine">Local connections · Bilingual interface · MCP support</p>
+        </div>
+      </div>
+      <figure class="product-frame">
+        <div class="frame-label"><span>Inside the workspace</span><span class="mono">SQL / DDL / MIGRATION</span></div>
+        <a href="/dbfox-site/assets/workspace.jpg" aria-label="Open the full workspace screenshot"><img src="/dbfox-site/assets/workspace.jpg" width="1280" height="720" fetchpriority="high" alt="dbfox workspace with a PostgreSQL connection, SQL editor and a sample query result table."></a>
+        <figcaption>Product UI with synthetic demo data · captured 25 Oct 2026. Select an image to inspect it at full size.</figcaption>
+      </figure>
+      <div class="database-strip" aria-label="Databases"><span>PostgreSQL</span><span>MySQL</span><span>Amazon Redshift</span><span>ClickHouse</span></div>
+    </section>
+
+    <section id="features" class="section wrap" aria-labelledby="features-title">
+      <div class="section-heading"><p class="eyebrow">01 / From discovery to execution</p><h2 id="features-title">A clearer path through cross-database work.</h2><p>For developers, DBAs and data engineers who need to understand a database, work across SQL dialects and review a migration before running it.</p></div>
+      <article class="feature-row">
+        <div><span class="step">01</span><h3>Find your way around a database.</h3><p>Browse connections, databases and objects in a single tree. Inspect DDL alongside your SQL workspace without losing context.</p><ul class="feature-list"><li>Table and view DDL across four database engines</li><li>Run queries on PostgreSQL and MySQL</li></ul></div>
+        <figure class="detail-frame"><a href="/dbfox-site/assets/catalog.png" aria-label="Open the database browser screenshot"><img src="/dbfox-site/assets/catalog.png" width="1440" height="400" loading="lazy" alt="The dbfox object tree shows a demo PostgreSQL database, public schema and orders table next to the SQL editor."></a><figcaption>Object browser and SQL editor · demo fixture, 29 Oct 2026</figcaption></figure>
+      </article>
+      <article class="feature-row">
+        <div><span class="step">02</span><h3>Understand what your SQL becomes.</h3><p>Convert SQL between PostgreSQL, MySQL, Redshift and ClickHouse. Inspect column lineage and compare structural changes side by side.</p><ul class="feature-list"><li>Conversion and analysis do not execute your SQL</li><li>Review warnings and unresolved lineage explicitly</li></ul></div>
+        <figure class="detail-frame"><a href="/dbfox-site/assets/sql-diff.png" aria-label="Open the SQL comparison screenshot"><img src="/dbfox-site/assets/sql-diff.png" width="1049" height="296" loading="lazy" alt="Side-by-side SQL comparison highlights IFNULL becoming COALESCE and DATE_FORMAT becoming TO_CHAR, with deletion and addition markers."></a><figcaption>SQL dialect conversion, with visible changes · 29 Oct 2026</figcaption></figure>
+      </article>
+      <article class="feature-row">
+        <div><span class="step">03</span><h3>See the plan before the move.</h3><p>Choose source and target, select tables and run preflight. Review type mappings and target conflicts before migrating schema and data.</p><ul class="feature-list"><li>Mapping levels make conversion risks visible</li><li>Inspect the execution report and skipped objects</li></ul></div>
+        <figure class="detail-frame"><a href="/dbfox-site/assets/migration.jpg" aria-label="Open the migration preflight screenshot"><img src="/dbfox-site/assets/migration.jpg" width="1280" height="720" loading="lazy" alt="Migration preflight from demo PostgreSQL to MySQL with three tables and lossless, lossy and unmappable type mapping levels."></a><figcaption>Migration preflight · synthetic demo, 25 Oct 2026</figcaption></figure>
+      </article>
+    </section>
+
+    <section id="databases" class="section database-section" aria-labelledby="databases-title"><div class="wrap">
+      <div class="section-heading"><p class="eyebrow">02 / Know the support boundaries</p><h2 id="databases-title">Four engines. Specific capabilities.</h2><p>Support depends on the task. SQL execution currently covers PostgreSQL and MySQL; dialect conversion covers all four engines.</p></div>
+      <div class="table-scroll" role="region" aria-labelledby="databases-title" tabindex="0">
+        <table><caption class="visually-hidden">Four engines. Specific capabilities.</caption><thead><tr><th scope="col">Database</th><th scope="col">Table / view DDL</th><th scope="col">Query execution</th><th scope="col">SQL conversion</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">PostgreSQL</th><td>Supported</td><td>Supported</td><td>Supported</td></tr>
+            <tr><th scope="row">MySQL</th><td>Supported</td><td>Supported</td><td>Supported</td></tr>
+            <tr><th scope="row">Amazon Redshift</th><td>Supported</td><td class="muted">Not available</td><td>Supported</td></tr>
+            <tr><th scope="row">ClickHouse</th><td>Supported</td><td class="muted">Not available</td><td>Supported</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="fine table-note">Object coverage varies by engine. PostgreSQL and Redshift table DDL is reconstructed from metadata. Migration support depends on the source, target, objects and types; use preflight to inspect the actual plan.</p>
+    </div></section>
+
+    <section id="mcp" class="section wrap mcp-section" aria-labelledby="mcp-title">
+      <div><p class="eyebrow">03 / A workspace for your AI tools, too</p><h2 id="mcp-title">Give your assistant context. Keep execution in your hands.</h2><p>Connect an MCP-compatible assistant to dbfox. Reuse saved connections for schema discovery, read-only queries, SQL conversion and migration planning.</p><a class="text-link" href="#mcp-install">MCP setup notes <span aria-hidden="true">↗</span></a></div>
+      <div class="mcp-panel"><div class="panel-heading"><span class="mono">MCP</span><span class="badge">12 read-only tools</span></div><ol><li><span class="mono">01</span>Explore schemas and inspect DDL</li><li><span class="mono">02</span>Query data and analyze SQL</li><li><span class="mono">03</span>Prepare a migration plan for review</li></ol><p class="fine">MCP does not expose write or migration execution tools. Database permissions remain the security boundary; use a read-only database account.</p></div>
+    </section>
+
+    <section id="install" class="section install-section" aria-labelledby="install-title"><div class="wrap">
+      <p class="eyebrow">04 / Start locally</p><h2 id="install-title">Your databases. Your workspace.</h2><p class="install-intro">The desktop app connects to your databases locally. This website introduces the product; it does not connect to databases or run SQL.</p>
+      <div class="install-grid"><article><span class="step">01</span><h3>Install on Windows</h3><p>The desktop app is packaged as a Windows MSI. Install it, launch dbfox and choose your interface language.</p><p class="notice">A public installer is not available from this page yet. The download link will appear here after the release is verified.</p></article><article><span class="step">02</span><h3>Add a connection</h3><p>Choose a database engine and enter its connection details. Test the connection, open a database and inspect the object tree. Start with a read-only account.</p></article><article id="mcp-install"><span class="step">03</span><h3>Set up MCP separately</h3><p>MCP requires the standalone dbfox-mcp executable. If you have access to the source repository, build it with:</p><code class="command">cargo build -p dbfox-mcp --release</code><p class="fine">Point your MCP client at the built executable using stdio. The desktop MSI alone does not configure MCP; a public standalone download is not yet linked here.</p></article></div>
+    </div></section>
+
+    <section class="section wrap faq" aria-labelledby="faq-title"><div><p class="eyebrow">05 / FAQ</p><h2 id="faq-title">Before you get started.</h2></div><div class="faq-list">
+      <details><summary>Do I need a dbfox cloud account?</summary><p>No dbfox cloud account is required for the local workspace. You connect using your own database credentials. If you connect an external AI assistant, its own data handling and account requirements apply.</p></details>
+      <details><summary>Can I run queries on every supported database?</summary><p>Query execution currently supports PostgreSQL and MySQL. Redshift and ClickHouse support object/DDL exploration and SQL dialect conversion. Cancelling a query does not undo statements that have already committed.</p></details>
+      <details><summary>Does migration guarantee an identical result?</summary><p>No. Database engines differ in types and semantics. Inspect preflight mappings and warnings, test on non-production data and review the result report. dbfox does not promise real-time CDC or zero-downtime migration.</p></details>
+      <details><summary>Can an AI assistant write data through MCP?</summary><p>The current MCP tools expose read-only exploration and migration planning, not database writes or migration execution. Read-only queries are limited to PostgreSQL and MySQL. Use database permissions to enforce access limits.</p></details>
+      <details><summary>Where are the macOS and Linux installers?</summary><p>The current desktop packaging targets Windows MSI. This page does not offer verified macOS or Linux installers. Public Windows and standalone MCP downloads will be added when available.</p></details>
+    </div></section>
+  </main>
+  <footer class="footer wrap"><a class="brand" href="/dbfox-site/en/"><img src="/dbfox-site/assets/logo.svg" width="25" height="25" alt=""><span>dbfox.</span></a><p>A local workspace for cross-database work.</p><a href="/dbfox-site/" lang="zh-CN" hreflang="zh-CN">中文</a><a href="#main">Back to top ↑</a></footer>
+</body>
+</html>

@@ -1,0 +1,39 @@
+/* Authoritative palette, shared by the app and docs/ui-color-preview.html. */
+:root {
+  color-scheme: light;
+  --paper: #e7e9e3;
+  --surface: #f4f5f1;
+  --raised: #ffffff;
+  --ink: #1f231b;
+  --ink-muted: #5f6556;
+  --ink-faint: #636a59;
+  --rule: #d0d4c8;
+  --rule-soft: #e3e6dc;
+  --accent: #8a5310;
+  --accent-hover: #6f410b;
+  --accent-soft: #efe3cd;
+  --accent-border: #decba9;
+  --terracotta: #c67b5c;
+  --sand: #d4c4a8;
+  --ok: #526f36;
+  --ok-soft: #edf2e7;
+  --ok-border: #b8cba4;
+  --warning: #8a5a00;
+  --warning-soft: #faf1dd;
+  --warning-border: #dfc58c;
+  --danger: #a33a28;
+  --danger-soft: #f7ede9;
+  --danger-border: #e0c3ba;
+  --info: #3f6b7a;
+  --info-soft: #eaf1f3;
+  --info-border: #b1cbd3;
+  --table: #3f6b7a;
+  --view: #7a5c9e;
+  --sql-keyword: #7a5c9e;
+  --sql-type: #3f6b7a;
+  --sql-string: #5f7f3f;
+  --sql-comment: #69705f;
+  --mono: ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace;
+  --sans: -apple-system, 'Segoe UI', 'PingFang SC', 'Helvetica Neue', Arial, sans-serif;
+  --shadow: 0 1px 2px rgb(31 35 27 / 6%);
+}

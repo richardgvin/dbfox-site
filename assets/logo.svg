@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 525 516" width="525" height="516" role="img" aria-labelledby="t">
+  <title id="t">Fox icon</title>
+  <defs>
+    <linearGradient id="fox-l" gradientUnits="userSpaceOnUse" x1="0" y1="64.2" x2="0" y2="464.0">
+      <stop offset="0" stop-color="#FFB648"/>
+      <stop offset="1" stop-color="#F2541F"/>
+    </linearGradient>
+    <linearGradient id="fox-r" gradientUnits="userSpaceOnUse" x1="0" y1="64.2" x2="0" y2="464.0">
+      <stop offset="0" stop-color="#FF9032"/>
+      <stop offset="1" stop-color="#D1331B"/>
+    </linearGradient>
+  </defs>
+  <!-- whole face in the lighter tone, then the right half drawn on top (no hairline seam) -->
+  <path fill="url(#fox-l)" d="M321.7 194.74L403.84 64.22L457.1 272.13L270.31 464.02L270.32 364.24L369.75 255.49L258.88 320.59L148.01 255.49L247.44 364.24L247.45 464.02L60.66 272.13L113.92 64.22L196.06 194.74L258.88 233.5ZM121.59 112.26L125.92 221.44L152.54 210.65ZM396.17 112.26L365.23 210.65L391.84 221.44Z"/>
+  <path fill="url(#fox-r)" d="M321.7 194.74L403.84 64.22L457.1 272.13L270.31 464.02L270.32 364.24L369.75 255.49L258.88 320.59L258.88 233.5ZM396.17 112.26L365.23 210.65L391.84 221.44Z"/>
+</svg>
