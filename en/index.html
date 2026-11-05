@@ -4,14 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>dbfox — Explore schemas. Translate SQL. Plan migrations.</title>
-  <meta name="description" content="A local database workspace for PostgreSQL, MySQL, Redshift and ClickHouse. Explore DDL, translate SQL, trace lineage and review migration plans.">
+  <meta name="description" content="A local workspace for 15 databases, including PostgreSQL, MySQL, SQL Server, Snowflake, MongoDB and Redis. Explore DDL, run queries, translate SQL, trace lineage and review migration plans.">
   <link rel="canonical" href="https://richardgvin.github.io/dbfox-site/en/">
   <link rel="alternate" hreflang="zh-CN" href="https://richardgvin.github.io/dbfox-site/">
   <link rel="alternate" hreflang="en" href="https://richardgvin.github.io/dbfox-site/en/">
   <link rel="alternate" hreflang="x-default" href="https://richardgvin.github.io/dbfox-site/">
   <meta property="og:type" content="website">
   <meta property="og:title" content="dbfox — Explore schemas. Translate SQL. Plan migrations.">
-  <meta property="og:description" content="A local database workspace for PostgreSQL, MySQL, Redshift and ClickHouse. Explore DDL, translate SQL, trace lineage and review migration plans.">
+  <meta property="og:description" content="A local workspace for 15 databases, including PostgreSQL, MySQL, SQL Server, Snowflake, MongoDB and Redis. Explore DDL, run queries, translate SQL, trace lineage and review migration plans.">
   <meta property="og:url" content="https://richardgvin.github.io/dbfox-site/en/">
   <meta property="og:image" content="https://richardgvin.github.io/dbfox-site/assets/workspace.jpg">
   <meta property="og:image:alt" content="dbfox workspace with a PostgreSQL connection, SQL editor and a sample query result table.">
@@ -47,17 +47,17 @@
         <a href="/dbfox-site/assets/workspace.jpg" aria-label="Open the full workspace screenshot"><img src="/dbfox-site/assets/workspace.jpg" width="1280" height="720" fetchpriority="high" alt="dbfox workspace with a PostgreSQL connection, SQL editor and a sample query result table."></a>
         <figcaption>Product UI with synthetic demo data · captured 25 Oct 2026. Select an image to inspect it at full size.</figcaption>
       </figure>
-      <div class="database-strip" aria-label="Databases"><span>PostgreSQL</span><span>MySQL</span><span>Amazon Redshift</span><span>ClickHouse</span></div>
+      <div class="database-strip" aria-label="Databases"><span><img class="db-icon" src="/dbfox-site/assets/db-postgres.svg" width="20" height="20" alt="">PostgreSQL</span><span><img class="db-icon" src="/dbfox-site/assets/db-mysql.svg" width="20" height="20" alt="">MySQL</span><span><img class="db-icon" src="/dbfox-site/assets/db-mariadb.svg" width="20" height="20" alt="">MariaDB</span><span><svg class="db-icon db-icon-generic" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg>SQL Server</span><span><img class="db-icon" src="/dbfox-site/assets/db-oracle.svg" width="20" height="20" alt="">Oracle</span><span><svg class="db-icon db-icon-generic" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg>Snowflake</span><span><img class="db-icon" src="/dbfox-site/assets/db-redshift.svg" width="20" height="20" alt="">Amazon Redshift</span><span><img class="db-icon" src="/dbfox-site/assets/db-clickhouse.svg" width="20" height="20" alt="">ClickHouse</span><span><img class="db-icon" src="/dbfox-site/assets/db-sqlite.svg" width="20" height="20" alt="">SQLite</span><span><img class="db-icon" src="/dbfox-site/assets/db-duckdb.svg" width="20" height="20" alt="">DuckDB</span><span><img class="db-icon" src="/dbfox-site/assets/db-duckdb.svg" width="20" height="20" alt="">DuckLake</span><span><img class="db-icon" src="/dbfox-site/assets/db-db2.svg" width="20" height="20" alt="">Db2</span><span><img class="db-icon" src="/dbfox-site/assets/db-mongodb.svg" width="20" height="20" alt="">MongoDB</span><span><img class="db-icon" src="/dbfox-site/assets/db-redis.svg" width="20" height="20" alt="">Redis</span><span><img class="db-icon" src="/dbfox-site/assets/db-elasticsearch.svg" width="20" height="20" alt="">Elasticsearch</span></div>
     </section>
 
     <section id="features" class="section wrap" aria-labelledby="features-title">
       <div class="section-heading"><p class="eyebrow">01 / From discovery to execution</p><h2 id="features-title">A clearer path through cross-database work.</h2><p>For developers, DBAs and data engineers who need to understand a database, work across SQL dialects and review a migration before running it.</p></div>
       <article class="feature-row">
-        <div><span class="step">01</span><h3>Find your way around a database.</h3><p>Browse connections, databases and objects in a single tree. Inspect DDL alongside your SQL workspace without losing context.</p><ul class="feature-list"><li>Table and view DDL across four database engines</li><li>Run queries on PostgreSQL and MySQL</li></ul></div>
+        <div><span class="step">01</span><h3>Find your way around a database.</h3><p>Browse connections, databases and objects in a single tree. Inspect DDL, run queries and page through large results without leaving your SQL workspace.</p><ul class="feature-list"><li>DDL for 12 SQL engines, plus MongoDB, Redis and Elasticsearch catalogs</li><li>Cursor-paged SQL results and native MongoDB and Redis commands</li></ul></div>
         <figure class="detail-frame"><a href="/dbfox-site/assets/catalog.png" aria-label="Open the database browser screenshot"><img src="/dbfox-site/assets/catalog.png" width="1440" height="400" loading="lazy" alt="The dbfox object tree shows a demo PostgreSQL database, public schema and orders table next to the SQL editor."></a><figcaption>Object browser and SQL editor · demo fixture, 29 Oct 2026</figcaption></figure>
       </article>
       <article class="feature-row">
-        <div><span class="step">02</span><h3>Understand what your SQL becomes.</h3><p>Convert SQL between PostgreSQL, MySQL, Redshift and ClickHouse. Inspect column lineage and compare structural changes side by side.</p><ul class="feature-list"><li>Conversion and analysis do not execute your SQL</li><li>Review warnings and unresolved lineage explicitly</li></ul></div>
+        <div><span class="step">02</span><h3>Understand what your SQL becomes.</h3><p>Convert SQL across ten dialects, from PostgreSQL and MySQL to SQL Server, Snowflake, Oracle and DuckDB. Inspect column lineage and compare structural changes side by side.</p><ul class="feature-list"><li>Conversion and analysis do not execute your SQL</li><li>Review warnings and unresolved lineage explicitly</li></ul></div>
         <figure class="detail-frame"><a href="/dbfox-site/assets/sql-diff.png" aria-label="Open the SQL comparison screenshot"><img src="/dbfox-site/assets/sql-diff.png" width="1049" height="296" loading="lazy" alt="Side-by-side SQL comparison highlights IFNULL becoming COALESCE and DATE_FORMAT becoming TO_CHAR, with deletion and addition markers."></a><figcaption>SQL dialect conversion, with visible changes · 29 Oct 2026</figcaption></figure>
       </article>
       <article class="feature-row">
@@ -69,21 +69,32 @@
     <section id="databases" class="section database-section" aria-labelledby="databases-title"><div class="wrap">
       <div class="section-heading"><h2 id="databases-title">Database support</h2></div>
       <div class="table-scroll" role="region" aria-labelledby="databases-title" tabindex="0">
-        <table><caption class="visually-hidden">Database support</caption><thead><tr><th scope="col">Database</th><th scope="col">Table / view DDL</th><th scope="col">Query execution</th><th scope="col">SQL conversion</th></tr></thead>
+        <table><caption class="visually-hidden">Database support</caption><thead><tr><th scope="col">Database</th><th scope="col">Browse / DDL</th><th scope="col">Query execution</th><th scope="col">SQL conversion</th><th scope="col">Migration</th></tr></thead>
           <tbody>
-            <tr><th scope="row">PostgreSQL</th><td>Supported</td><td>Supported</td><td>Supported</td></tr>
-            <tr><th scope="row">MySQL</th><td>Supported</td><td>Supported</td><td>Supported</td></tr>
-            <tr><th scope="row">Amazon Redshift</th><td>Supported</td><td class="muted">Not available</td><td>Supported</td></tr>
-            <tr><th scope="row">ClickHouse</th><td>Supported</td><td class="muted">Not available</td><td>Supported</td></tr>
+            <tr><th scope="row"><img class="db-icon" src="/dbfox-site/assets/db-postgres.svg" width="20" height="20" alt="">PostgreSQL</th><td>Supported</td><td>Supported</td><td>Supported</td><td>Supported</td></tr>
+            <tr><th scope="row"><img class="db-icon" src="/dbfox-site/assets/db-mysql.svg" width="20" height="20" alt="">MySQL</th><td>Supported</td><td>Supported</td><td>Supported</td><td>Supported</td></tr>
+            <tr><th scope="row"><img class="db-icon" src="/dbfox-site/assets/db-mariadb.svg" width="20" height="20" alt="">MariaDB</th><td>Supported</td><td>Supported</td><td>Supported</td><td>Supported</td></tr>
+            <tr><th scope="row"><svg class="db-icon db-icon-generic" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg>SQL Server</th><td>Supported</td><td>Supported</td><td>Supported</td><td>Supported</td></tr>
+            <tr><th scope="row"><img class="db-icon" src="/dbfox-site/assets/db-duckdb.svg" width="20" height="20" alt="">DuckDB</th><td>Supported</td><td>Supported</td><td>Supported</td><td>Supported</td></tr>
+            <tr><th scope="row"><img class="db-icon" src="/dbfox-site/assets/db-redshift.svg" width="20" height="20" alt="">Amazon Redshift</th><td>Supported</td><td class="muted">Not available</td><td>Supported</td><td>Supported</td></tr>
+            <tr><th scope="row"><img class="db-icon" src="/dbfox-site/assets/db-clickhouse.svg" width="20" height="20" alt="">ClickHouse</th><td>Supported</td><td class="muted">Not available</td><td>Supported</td><td>Supported</td></tr>
+            <tr><th scope="row"><img class="db-icon" src="/dbfox-site/assets/db-sqlite.svg" width="20" height="20" alt="">SQLite</th><td>Supported</td><td>Supported</td><td>Supported</td><td class="muted">Not available</td></tr>
+            <tr><th scope="row"><svg class="db-icon db-icon-generic" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg>Snowflake</th><td>Supported</td><td>Supported</td><td>Supported</td><td class="muted">Not available</td></tr>
+            <tr><th scope="row"><img class="db-icon" src="/dbfox-site/assets/db-oracle.svg" width="20" height="20" alt="">Oracle</th><td>Supported</td><td>Supported</td><td>Supported</td><td class="muted">Not available</td></tr>
+            <tr><th scope="row"><img class="db-icon" src="/dbfox-site/assets/db-duckdb.svg" width="20" height="20" alt="">DuckLake</th><td>Supported</td><td>Supported</td><td class="muted">Not available</td><td class="muted">Not available</td></tr>
+            <tr><th scope="row"><img class="db-icon" src="/dbfox-site/assets/db-db2.svg" width="20" height="20" alt="">Db2</th><td>Supported</td><td>Supported</td><td class="muted">Not available</td><td class="muted">Not available</td></tr>
+            <tr><th scope="row"><img class="db-icon" src="/dbfox-site/assets/db-elasticsearch.svg" width="20" height="20" alt="">Elasticsearch</th><td>Browse only</td><td>Read-only</td><td class="muted">Not available</td><td class="muted">Not available</td></tr>
+            <tr><th scope="row"><img class="db-icon" src="/dbfox-site/assets/db-mongodb.svg" width="20" height="20" alt="">MongoDB</th><td>Browse only</td><td>Native commands</td><td class="muted">Not available</td><td class="muted">Not available</td></tr>
+            <tr><th scope="row"><img class="db-icon" src="/dbfox-site/assets/db-redis.svg" width="20" height="20" alt="">Redis</th><td>Browse only</td><td>Native commands</td><td class="muted">Not available</td><td class="muted">Not available</td></tr>
           </tbody>
         </table>
       </div>
-      <p class="fine table-note">Object coverage varies by engine. PostgreSQL and Redshift table DDL is reconstructed from metadata. Migration support depends on the source, target, objects and types; use preflight to inspect the actual plan.</p>
+      <p class="fine table-note">Object coverage varies by engine; some table DDL is reconstructed from metadata. Oracle requires Oracle Instant Client and Db2 the IBM Db2 ODBC driver. Migration support depends on the source, target, objects and types; use preflight to inspect the actual plan.</p>
     </div></section>
 
     <section id="mcp" class="section wrap mcp-section" aria-labelledby="mcp-title">
       <div><p class="eyebrow">03 / A workspace for your AI tools, too</p><h2 id="mcp-title">Give your assistant context. Keep execution in your hands.</h2><p>Connect an MCP-compatible assistant to dbfox. Reuse saved connections for schema discovery, read-only queries, SQL conversion and migration planning.</p><a class="text-link" href="#mcp-install">MCP setup notes <span aria-hidden="true">↗</span></a></div>
-      <div class="mcp-panel"><div class="panel-heading"><span class="mono">MCP</span><span class="badge">12 read-only tools</span></div><ol><li><span class="mono">01</span>Explore schemas and inspect DDL</li><li><span class="mono">02</span>Query data and analyze SQL</li><li><span class="mono">03</span>Prepare a migration plan for review</li></ol><p class="fine">MCP does not expose write or migration execution tools. Database permissions remain the security boundary; use a read-only database account.</p></div>
+      <div class="mcp-panel"><div class="panel-heading"><span class="mono">MCP</span><span class="badge">15 read-only tools</span></div><ol><li><span class="mono">01</span>Explore schemas and inspect DDL</li><li><span class="mono">02</span>Query data and analyze SQL</li><li><span class="mono">03</span>Prepare a migration plan for review</li></ol><p class="fine">MCP does not expose write or migration execution tools. Database permissions remain the security boundary; use a read-only database account.</p></div>
     </section>
 
     <section id="install" class="section install-section" aria-labelledby="install-title"><div class="wrap">
@@ -93,9 +104,9 @@
 
     <section class="section wrap faq" aria-labelledby="faq-title"><div><p class="eyebrow">05 / FAQ</p><h2 id="faq-title">Before you get started.</h2></div><div class="faq-list">
       <details><summary>Do I need a dbfox cloud account?</summary><p>No dbfox cloud account is required for the local workspace. You connect using your own database credentials. If you connect an external AI assistant, its own data handling and account requirements apply.</p></details>
-      <details><summary>Can I run queries on every supported database?</summary><p>Query execution currently supports PostgreSQL and MySQL. Redshift and ClickHouse support object/DDL exploration and SQL dialect conversion. Cancelling a query does not undo statements that have already committed.</p></details>
+      <details><summary>Can I run queries on every supported database?</summary><p>SQL runs on PostgreSQL, MySQL, MariaDB, SQL Server, SQLite, Snowflake, DuckDB, DuckLake, Oracle and Db2. Elasticsearch accepts read-only SQL and search requests; MongoDB and Redis run native commands. Redshift and ClickHouse support browsing, DDL, SQL conversion and migration. Cancelling a query does not undo statements that have already committed.</p></details>
       <details><summary>Does migration guarantee an identical result?</summary><p>No. Database engines differ in types and semantics. Inspect preflight mappings and warnings, test on non-production data and review the result report. dbfox does not promise real-time CDC or zero-downtime migration.</p></details>
-      <details><summary>Can an AI assistant write data through MCP?</summary><p>The current MCP tools expose read-only exploration and migration planning, not database writes or migration execution. Read-only queries are limited to PostgreSQL and MySQL. Use database permissions to enforce access limits.</p></details>
+      <details><summary>Can an AI assistant write data through MCP?</summary><p>The current MCP tools expose read-only exploration and migration planning, not database writes or migration execution. Read-only queries are limited to PostgreSQL, MySQL, MariaDB, SQL Server and SQLite. Use database permissions to enforce access limits.</p></details>
       <details><summary>Where are the macOS and Linux installers?</summary><p>The current desktop packaging targets Windows MSI. This page does not offer verified macOS or Linux installers. Public Windows and standalone MCP downloads will be added when available.</p></details>
     </div></section>
   </main>
