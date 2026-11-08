@@ -88,6 +88,15 @@ tbody td.muted { color: var(--ink-muted); }
 .mcp-panel li span { color: var(--ink-muted); font-size: 14px; }
 .install-section { border-block: 1px solid var(--rule); background: var(--paper); }
 .install-intro { max-width: 680px; margin-top: 24px; }
+.release-status { margin-top: 28px; font-weight: 600; color: var(--ink); }
+.install-section .notice { margin-top: 12px; color: var(--accent); }
+.download-list { margin-top: 24px; }
+.download-row { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-block: 20px; border-bottom: 1px solid var(--rule); }
+.download-row h3 { margin: 0 0 4px; font-size: 21px; }
+.download-row p { font-variant-numeric: tabular-nums; }
+.download-row .button { flex-shrink: 0; }
+.download-links { display: flex; flex-wrap: wrap; gap: 12px 28px; margin-top: 24px; }
+.download-links a { min-height: 32px; }
 .install-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 48px; gap: 40px; }
 .install-grid article { border-top: 1px solid var(--rule); padding-top: 20px; }
 .install-grid h3 { font-size: 21px; }
