@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "version": "0.2.0",
+  "channel": "stable",
+  "release_url": "https://github.com/richardgvin/dbfox/releases/tag/v0.2.0",
+  "windows_signing": "unsigned",
+  "assets": [
+    {
+      "platform": "windows",
+      "arch": "x86_64",
+      "kind": "msi",
+      "name": "dbfox-0.2.0-windows-x86_64.msi",
+      "url": "https://github.com/richardgvin/dbfox/releases/download/v0.2.0/dbfox-0.2.0-windows-x86_64.msi",
+      "size": 27156480,
+      "sha256": "5da3109ce26f911d3a10df4fb6715fa920909b8967ad09d3a9fdf5641510fbba"
+    },
+    {
+      "platform": "windows",
+      "arch": "x86_64",
+      "kind": "standalone",
+      "name": "dbfox-0.2.0-windows-x86_64-standalone.zip",
+      "url": "https://github.com/richardgvin/dbfox/releases/download/v0.2.0/dbfox-0.2.0-windows-x86_64-standalone.zip",
+      "size": 45306756,
+      "sha256": "e11da5305973fa204cf315416ea2473555c6f6067cf5f52473d5a940bd43dd8e"
+    },
+    {
+      "platform": "windows",
+      "arch": "x86_64",
+      "kind": "mcp",
+      "name": "dbfox-0.2.0-windows-x86_64-mcp.zip",
+      "url": "https://github.com/richardgvin/dbfox/releases/download/v0.2.0/dbfox-0.2.0-windows-x86_64-mcp.zip",
+      "size": 21981495,
+      "sha256": "a6c85f88fa6060eac6bb0d05b3937066273397e987e5992fea0d0d85853e87bc"
+    },
+    {
+      "platform": "linux",
+      "arch": "amd64",
+      "kind": "compose",
+      "name": "dbfox-0.2.0-compose.zip",
+      "url": "https://github.com/richardgvin/dbfox/releases/download/v0.2.0/dbfox-0.2.0-compose.zip",
+      "size": 69023,
+      "sha256": "5eddd20aec6ce4d57fb1891a890e59f37bad4e75e67be5158e587036f8ae04bb"
+    },
+    {
+      "platform": "any",
+      "arch": "any",
+      "kind": "license",
+      "name": "LICENSE",
+      "url": "https://github.com/richardgvin/dbfox/releases/download/v0.2.0/LICENSE",
+      "size": 1068,
+      "sha256": "6c62b375dc31915f4d37040e0044000345dfc61c2f6c1afa3f7284c00a4962d5"
+    },
+    {
+      "platform": "any",
+      "arch": "any",
+      "kind": "notices",
+      "name": "THIRD_PARTY_NOTICES.md",
+      "url": "https://github.com/richardgvin/dbfox/releases/download/v0.2.0/THIRD_PARTY_NOTICES.md",
+      "size": 790118,
+      "sha256": "bbc15c4bf60053535d3148db968f8642d69e945db3b04f2544ec9facc1756855"
+    }
+  ],
+  "images": {
+    "server": {
+      "reference": "ghcr.io/richardgvin/dbfox-server:0.2.0",
+      "digest": "sha256:3c386397551993c7839944ada56c22ed84601d1005ce3fb1eb666be04d012cd1",
+      "platform": "linux/amd64"
+    },
+    "web": {
+      "reference": "ghcr.io/richardgvin/dbfox-web:0.2.0",
+      "digest": "sha256:e6f758cbcfbc863e84d2fe118dfd5aa5a1f65108384b2329b40adab7e58d7dc0",
+      "platform": "linux/amd64"
+    }
+  }
+}
