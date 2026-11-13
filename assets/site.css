@@ -57,11 +57,7 @@ figcaption strong { margin-right: 12px; color: var(--ink); font-weight: 600; }
 img.db-icon, .db-icon { display: inline-block; flex: none; width: 20px; height: 20px; object-fit: contain; }
 .db-icon-generic { color: var(--ink-muted); }
 .section { padding-block: 88px; }
-.section-heading { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 32px; align-items: start; margin-bottom: 36px; }
-/* Share the capture's viewport limit with its copy so both edges stay aligned. */
-#features .section-heading, .feature { width: min(100%, 1120px, max(420px, 100dvh - 168px) * 1120 / 928); margin-inline: auto; }
-#features .section-heading, .feature-copy { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; margin-bottom: 36px; }
-#features .section-heading h2, .feature-copy h3 { text-align: center; }
+.section-heading, .feature-copy { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 32px; align-items: center; margin-bottom: 36px; }
 .feature + .feature { margin-top: 104px; }
 .feature-copy h3 { margin: 0; letter-spacing: -.02em; }
 .feature-list { padding: 0; margin: 16px 0 0; list-style: none; font-size: 16px; }
@@ -70,21 +66,23 @@ img.db-icon, .db-icon { display: inline-block; flex: none; width: 20px; height: 
 /* Without the script a flow is a plain sequence of captioned pictures. */
 .flow-frame + .flow-frame { margin-top: 24px; }
 /* A capture can be taller than the window; its steps stay in reach while it scrolls past. */
-.flow-bar { position: sticky; top: 0; z-index: 2; display: flex; align-items: flex-start; gap: 8px; padding-top: 8px; background: var(--surface); }
-.flow-steps { display: flex; flex: 1; flex-wrap: wrap; gap: 4px; counter-reset: step; }
+.flow-bar { position: sticky; top: 0; z-index: 2; display: grid; grid-template: var(--flow-controls-height, auto) / minmax(0, 1fr); overflow-x: clip; padding-top: 8px; background: var(--surface); }
+.flow-controls { display: flex; align-items: flex-start; justify-self: center; align-self: start; width: max-content; gap: 8px; white-space: nowrap; transform: scale(var(--flow-scale, 1)); transform-origin: top center; }
+.flow-steps { display: flex; flex: none; gap: 4px; counter-reset: step; }
 .flow-step { position: relative; overflow: hidden; display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 8px 12px; border: 0; border-radius: 6px 6px 0 0; background: var(--paper); color: var(--ink-muted); font: 600 14px/1.2 var(--sans); cursor: pointer; counter-increment: step; transition: background-color .16s, color .16s; }
 .flow-step::before { content: counter(step); min-width: 20px; padding: 3px 0; border-radius: 4px; background: var(--paper); color: var(--ink-muted); font-size: 14px; font-variant-numeric: tabular-nums; text-align: center; }
 .flow-step:hover { background: var(--accent-soft); color: var(--accent-hover); }
 .flow-step[aria-selected='true'] { background: var(--accent-soft); color: var(--accent-hover); }
 .flow-step[aria-selected='true']::before { background: var(--accent); color: var(--raised); }
 .flow-step:focus-visible, .tool-button:focus-visible { outline-offset: 2px; }
+.flow-controls :focus-visible { outline-offset: -3px; }
 /* The line under the current step doubles as the timer: when its animation ends, site.js moves on. */
 .flow-step[aria-selected='true']::after { content: ''; position: absolute; inset: auto 0 0; height: 2px; background: var(--accent); transform-origin: left; }
 .flow-auto.is-visible .flow-step[aria-selected='true']::after { animation: flow-progress 6s linear; }
 /* Reading or operating a flow holds it still. These selectors must outweigh the shorthand above. */
 .flow:hover .flow-step[aria-selected='true']::after, .flow:focus-within .flow-step[aria-selected='true']::after, body:has(.image-preview[open]) .flow-step[aria-selected='true']::after { animation-play-state: paused; }
 @keyframes flow-progress { from { transform: scaleX(0); } }
-.flow-toggle { min-height: 40px; }
+.flow-toggle { flex: none; width: 40px; min-height: 40px; padding: 6px; }
 .flow-toggle::before { content: ''; width: 10px; height: 12px; border-inline: 3px solid currentColor; }
 .flow-toggle[data-state='paused']::before { width: 0; border-block: 6px solid transparent; border-inline: 10px solid currentColor; border-inline-end-width: 0; }
 /* Steps are stacked in one cell and share its caption row and picture row, so
@@ -92,8 +90,10 @@ img.db-icon, .db-icon { display: inline-block; flex: none; width: 20px; height: 
 .flow-ready { display: grid; grid-template: auto auto auto / minmax(0, 1fr); }
 .flow-ready .flow-bar { grid-row: 1; }
 .flow-ready .flow-frame { grid-area: 2 / 1 / 4 / 2; display: grid; grid-template-rows: subgrid; margin: 0; min-width: 0; visibility: hidden; opacity: 0; transition: visibility 0s .2s, opacity 0s .2s; }
-.flow-ready .shot { grid-row: 1 / -1; display: grid; grid-template-rows: subgrid; border-top-left-radius: 0; background: var(--paper); }
+.flow-ready .shot { grid-row: 1 / -1; display: grid; grid-template-rows: subgrid; border-top-left-radius: 0; background: var(--surface); }
 .flow-ready .shot a { align-self: start; }
+/* Hidden steps share the caption row but do not reserve their image height. */
+.flow-ready .flow-frame:not(.is-current) .shot a { height: 0; }
 /* The incoming step fades in over the outgoing one, which is removed once covered. */
 .flow-ready .flow-frame.is-current { z-index: 1; visibility: visible; opacity: 1; transition: opacity .2s; }
 .image-preview { width: min(1680px, calc(100% - 32px)); height: calc(100% - 32px); max-width: none; max-height: calc(100% - 32px); padding: 0; overflow: hidden; border: 0; border-radius: 10px; background: var(--raised); color: var(--ink); opacity: 0; transform: translateY(8px); transition: opacity .18s, transform .18s, overlay .18s allow-discrete, display .18s allow-discrete; }
@@ -136,7 +136,6 @@ tbody td.muted { color: var(--ink-muted); }
 .install-section { background: var(--paper); }
 .install-intro { max-width: 680px; margin-top: 24px; }
 .release-status { margin-top: 28px; font-weight: 600; color: var(--ink); }
-.install-section .notice { margin-top: 12px; color: var(--accent); }
 .download-list { margin-top: 24px; }
 .download-row { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-block: 20px; }
 .download-row h3 { margin: 0 0 4px; }
@@ -166,7 +165,7 @@ details p { margin-top: 16px; font-size: 16px; }
   .wrap { width: calc(100% - 48px); }
   .header { padding-block: 20px; }
   nav { flex-wrap: wrap; justify-content: flex-end; gap: 8px 18px; }
-  .hero-copy, .section-heading { grid-template-columns: 1fr; gap: 28px; }
+  .hero-copy, .section-heading, .feature-copy { grid-template-columns: 1fr; gap: 28px; }
   .hero-description > p:first-child { max-width: 660px; }
   .section { padding-block: 64px; }
   .database-strip { grid-template-columns: repeat(3, minmax(0, 1fr)); }

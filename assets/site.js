@@ -134,10 +134,20 @@ for (const flow of document.querySelectorAll('.flow')) {
   toggle.className = 'tool-button flow-toggle';
   toggle.addEventListener('click', () => setAuto(!flow.classList.contains('flow-auto')));
   bar.className = 'flow-bar';
-  bar.append(steps);
-  if (!stillMotion) bar.append(toggle);
+  const controls = document.createElement('div');
+  controls.className = 'flow-controls';
+  controls.append(steps);
+  if (!stillMotion) controls.append(toggle);
+  bar.append(controls);
   flow.prepend(bar);
   flow.classList.add('flow-ready');
+  const controlsSize = controls.getBoundingClientRect();
+  // Reserve only the scaled height so the caption stays against the controls.
+  new ResizeObserver(([entry]) => {
+    const scale = Math.min(1, entry.contentRect.width / controlsSize.width);
+    bar.style.setProperty('--flow-scale', String(scale));
+    bar.style.setProperty('--flow-controls-height', `${controlsSize.height * scale}px`);
+  }).observe(flow);
   select(0);
   setAuto(!stillMotion);
   new IntersectionObserver(([entry]) => flow.classList.toggle('is-visible', entry.isIntersecting), { threshold: 0.4 }).observe(flow);
